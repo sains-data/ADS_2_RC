@@ -11,8 +11,11 @@
 
 # 2. Paket R yang digunakan
 Analisis dalam file codeR_2_RC.Rmd menggunakan tiga paket utama :
+
 readxl = digunakan untuk membaca file Excel (.xlsx) yang berisi data penelitian.
+
 dplyr = digunakan untuk melakukan pembersihan data, seleksi kolom, manipulasi data, dan filtering.
+
 tidyr = digunakan untuk mengubah data dari format wide ke long (pivoting) sebelum dilakukan analisis ANOVA.
 
 # 3. Penjelasan singkat dataset
