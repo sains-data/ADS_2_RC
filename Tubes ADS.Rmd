@@ -1,0 +1,43 @@
+---
+title: "Untitled"
+author: "Kelompok 2"
+date: "2025-11-16"
+output: html_document
+---
+
+```{r}
+library(readxl)
+library(dplyr)
+library(tidyr)
+
+# 1. BACA DATA 
+data <- read_excel("D:/Tubes ADS/Book1.xlsx")
+
+# 2. AMBIL HANYA 4 KOLOM 
+data <- data %>%
+  select(
+    `Aktif kegiatan akademik`,
+    `Aktif organisasi kemahasiswaan`,
+    `Tidak aktif`,
+    `Lainnya`
+  )
+
+# 3. UBAH MENJADI LONG
+data_long <- data %>%
+  pivot_longer(
+    cols = everything(),
+    names_to = "Kategori",
+    values_to = "Jam"
+  )
+
+# 4. UBAH KE NUMERIK
+data_long$Jam <- as.numeric(data_long$Jam)
+
+# 5. HAPUS NA
+data_long <- data_long %>% drop_na()
+
+# 6. ANOVA 
+data_long$Kategori <- as.factor(data_long$Kategori)
+anova_model <- aov(Jam ~ Kategori, data = data_long)
+summary(anova_model)
+```
