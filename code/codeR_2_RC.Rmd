@@ -11,7 +11,7 @@ library(dplyr)
 library(tidyr)
 
 # 1. BACA DATA 
-data <- read_excel("D:/Tubes ADS/Book1.xlsx")
+data <- read_excel("D:/Tubes ADS.xlsx")
 
 # 2. AMBIL HANYA 4 KOLOM 
 data <- data %>%
