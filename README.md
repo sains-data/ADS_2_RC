@@ -1,75 +1,100 @@
-# 1. Cara menjalankan script
-1. Buka file codeR_2_RC.Rmd menggunakan RStudio.
-2. Pastikan paket yang dibutuhkan sudah terinstal :
+# ADS_2_RC - Analisis Data Statistik Tugas Kelompok 2
 
-    install.packages(c("readxl", "dplyr","tidyr"))
-3. Import dataset jika diperlukan :
+## Daftar Isi
+- [Struktur Repository](#struktur-repository)
+- [Cara Menjalankan Script](#cara-menjalankan-script)
+- [Paket R yang Digunakan](#paket-r-yang-digunakan)
+- [Penjelasan Dataset](#penjelasan-dataset)
 
-    data <- read_csv("data/dataset.csv")# 1. Cara menjalankan script
-1. Buka file codeR_2_RC.Rmd menggunakan RStudio.
-2. Pastikan paket yang dibutuhkan sudah terinstal :
+---
 
-    install.packages(c("readxl", "dplyr","tidyr"))
-3. Import dataset jika diperlukan :
+## Struktur Repository
 
-    data <- read_csv("data/dataset.csv")
-4. Untuk menjalankan seluruh analisis ANOVA dan menghasilkan output lengkap, klik tombol Knit di bagian atas RStudio.
-5. Hasil analisis akan muncul dalam bentuk output console,sesuai kode yang ada pada file .Rmd.
-
-# 2. Paket R yang digunakan
-Analisis dalam file codeR_2_RC.Rmd menggunakan tiga paket utama :
-
-readxl = digunakan untuk membaca file Excel (.xlsx) yang berisi data penelitian.
-
-dplyr = digunakan untuk melakukan pembersihan data, seleksi kolom, manipulasi data, dan filtering.
-
-tidyr = digunakan untuk mengubah data dari format wide ke long (pivoting) sebelum dilakukan analisis ANOVA.
-
-# 3. Penjelasan singkat dataset
-Dataset yang digunakan dalam analisis ini berisi data jam belajar mahasiswa per minggu berdasarkan kategori tingkat keterlibatan dalam kegiatan kampus. Data diambil dari file Excel yang kemudian dibaca menggunakan paket readxl.
-
-Variabel utama yang digunakan:
-
-Kategori 
-
-Berisi empat kelompok tingkat keterlibatan mahasiswa : Aktif kegiatan akademik, Aktif kegiatan organisasi kemahasiswaan, Tidak aktif, Lainnya
-
-Jam
-
-Jumlah jam belajar per minggu dari masing-masing mahasiswa.
-Nilai ini digunakan sebagai variabel respon dalam analisis ANOVA.
-
-Dataset kemudian diubah dari format wide ke long menggunakan pivot_longer() agar dapat dianalisis menggunakan ANOVA one-way.
-# 4. Struktur Repository
+```
 ADS_2_RC/
-* README.md                # Dokumentasi proyek 
-* data                     # Data historis saham PTBA, SMBR, RMKE (4 tahun)
-* code                     # Jupyter Notebook berisi analisis lengkap dalam R
-* output                   # Output dari kode R.
-* poster                   # Poster 
-4. Untuk menjalankan seluruh analisis ANOVA dan menghasilkan output lengkap, klik tombol Knit di bagian atas RStudio.
-5. Hasil analisis akan muncul dalam bentuk output console,sesuai kode yang ada pada file .Rmd.
+├── README.md                 # Dokumentasi proyek
+├── codeR_2_RC.Rmd           # Script R Markdown untuk analisis ANOVA
+├── data/                     # Folder data penelitian
+│   └── dataset.xlsx          # Data jam belajar mahasiswa per kategori keterlibatan
+├── output/                   # Folder untuk output analisis
+│   ├── hasil_anova.txt       # Hasil analisis ANOVA
+│   ├── summary_statistik.txt # Ringkasan statistik deskriptif
+│   └── visualisasi/          # Folder untuk grafik dan visualisasi
+├── poster/                   # Folder dokumentasi poster
+│   └── poster_ads_2.pdf      # Poster penelitian
+└── docs/                     # Dokumentasi tambahan (opsional)
+    └── penjelasan_analisis.md # Penjelasan detail analisis
+```
 
-# 2. Paket R yang digunakan
-Analisis dalam file codeR_2_RC.Rmd menggunakan tiga paket utama :
+---
 
-* readxl = digunakan untuk membaca file Excel (.xlsx) yang berisi data penelitian.
+## Cara Menjalankan Script
 
-* dplyr = digunakan untuk melakukan pembersihan data, seleksi kolom, manipulasi data, dan filtering.
+### Prasyarat
+- **RStudio** sudah terinstal
+- **R** versi 3.6 atau lebih baru
 
-* tidyr = digunakan untuk mengubah data dari format wide ke long (pivoting) sebelum dilakukan analisis ANOVA.
+### Langkah-langkah
 
-# 3. Penjelasan singkat dataset
-Dataset yang digunakan dalam analisis ini berisi data jam belajar mahasiswa per minggu berdasarkan kategori tingkat keterlibatan dalam kegiatan kampus. Data diambil dari file Excel yang kemudian dibaca menggunakan paket readxl.
+1. **Buka file** `codeR_2_RC.Rmd` menggunakan RStudio
 
-Variabel utama yang digunakan:
+2. **Instal paket yang dibutuhkan** (jika belum terinstal):
+   ```r
+   install.packages(c("readxl", "dplyr", "tidyr"))
+   ```
 
-* Kategori 
+3. **Pastikan dataset tersedia** di folder `data/dataset.xlsx`
 
-    Berisi empat kelompok tingkat keterlibatan mahasiswa : Aktif kegiatan akademik, Aktif kegiatan organisasi kemahasiswaan, Tidak aktif, Lainnya
+4. **Jalankan analisis** dengan mengklik tombol **Knit** di bagian atas RStudio
+   - Pilih format output (HTML, PDF, atau Word)
 
-* Jam
+5. **Output akan dihasilkan** dalam bentuk:
+   - Laporan HTML/PDF/Word
+   - File teks hasil analisis di folder `output/`
+   - Visualisasi grafik
 
-    Jumlah jam belajar per minggu dari masing-masing mahasiswa. Nilai ini digunakan sebagai variabel respon dalam analisis ANOVA.
+---
 
-Dataset kemudian diubah dari format wide ke long menggunakan pivot_longer() agar dapat dianalisis menggunakan ANOVA one-way.
+## Paket R yang Digunakan
+
+| Paket | Fungsi |
+|-------|--------|
+| **readxl** | Membaca file Excel (.xlsx) yang berisi data penelitian |
+| **dplyr** | Pembersihan data, seleksi kolom, manipulasi data, dan filtering |
+| **tidyr** | Mengubah data dari format wide ke long (pivoting) sebelum analisis ANOVA |
+
+---
+
+## Penjelasan Dataset
+
+### Deskripsi Umum
+Dataset berisi **data jam belajar mahasiswa per minggu** berdasarkan kategori tingkat keterlibatan dalam kegiatan kampus. Data berasal dari file Excel dan dianalisis menggunakan **ANOVA One-Way**.
+
+### Variabel Utama
+
+| Variabel | Penjelasan |
+|----------|-----------|
+| **Kategori** | Empat kelompok tingkat keterlibatan mahasiswa:<br>- Aktif kegiatan akademik<br>- Aktif kegiatan organisasi kemahasiswaan<br>- Tidak aktif<br>- Lainnya |
+| **Jam** | Jumlah jam belajar per minggu dari masing-masing mahasiswa (variabel respon ANOVA) |
+
+### Transformasi Data
+- Data awal berformat **wide** (masing-masing kategori di kolom terpisah)
+- Ditransformasi ke format **long** menggunakan `pivot_longer()` dari paket **tidyr**
+- Format long memudahkan analisis ANOVA one-way
+
+---
+
+## Metode Analisis
+
+Penelitian ini menggunakan **ANOVA One-Way** untuk menguji hipotesis:
+- **H₀**: Rata-rata jam belajar sama untuk semua kategori keterlibatan
+- **H₁**: Minimal ada satu kategori yang berbeda rata-rata jam belajarnya
+
+---
+
+## Output yang Dihasilkan
+
+1. **Statistik Deskriptif** - Mean, SD, N untuk setiap kategori
+2. **Tabel ANOVA** - F-statistic, p-value, dan kesimpulan
+3. **Visualisasi** - Boxplot dan barplot perbandingan jam belajar
+4. **Interpretasi** - Kesimpulan hasil analisis
