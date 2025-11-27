@@ -13,18 +13,10 @@
 ```
 ADS_2_RC/
 ├── README.md                 # Dokumentasi proyek
-├── codeR_2_RC.Rmd           # Script R Markdown untuk analisis ANOVA
-├── data/                     # Folder data penelitian
-│   └── dataset.xlsx          # Data jam belajar mahasiswa per kategori keterlibatan
-├── output/                   # Folder untuk output analisis
-│   ├── hasil_anova.txt       # Hasil analisis ANOVA
-│   ├── summary_statistik.txt # Ringkasan statistik deskriptif
-│   └── visualisasi/          # Folder untuk grafik dan visualisasi
-├── poster/                   # Folder dokumentasi poster
-│   └── poster_ads_2.pdf      # Poster penelitian
-└── docs/                     # Dokumentasi tambahan (opsional)
-    └── penjelasan_analisis.md # Penjelasan detail analisis
-```
+├── codeR_2_RC.Rmd            # Script R Markdown untuk analisis ANOVA
+├── data_2_RC.xlsx            # Data jam belajar mahasiswa per kategori keterlibatan
+├── Output_2_RC.pdf           # Folder untuk output analisis
+├── poster_ads_2.pdf          # Poster penelitian```
 
 ---
 
