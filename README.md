@@ -16,7 +16,8 @@ ADS_2_RC/
 ├── codeR_2_RC.Rmd            # Script R Markdown untuk analisis ANOVA
 ├── data_2_RC.xlsx            # Data jam belajar mahasiswa per kategori keterlibatan
 ├── Output_2_RC.pdf           # Folder untuk output analisis
-├── poster_ads_2.pdf          # Poster penelitian```
+├── poster_ads_2.pdf          # Poster penelitian
+```
 
 ---
 
