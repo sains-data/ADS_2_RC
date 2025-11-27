@@ -33,3 +33,11 @@ Jumlah jam belajar per minggu dari masing-masing mahasiswa.
 Nilai ini digunakan sebagai variabel respon dalam analisis ANOVA.
 
 Dataset kemudian diubah dari format wide ke long menggunakan pivot_longer() agar dapat dianalisis menggunakan ANOVA one-way.
+# 4. Struktur Repository
+ADS_2_RC/
+│
+├── README.md                # Dokumentasi proyek 
+├── data                     # Data historis saham PTBA, SMBR, RMKE (4 tahun)
+├── code                     # Jupyter Notebook berisi analisis lengkap dalam R
+├── output                   # Output dari kode R.
+└── poster                   # Poster 
