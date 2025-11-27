@@ -5,6 +5,8 @@ date: "2025-11-16"
 output: html_document
 ---
 
+### ANOVA
+
 ```{r}
 library(readxl)
 library(dplyr)
@@ -40,4 +42,21 @@ data_long <- data_long %>% drop_na()
 data_long$Kategori <- as.factor(data_long$Kategori)
 anova_model <- aov(Jam ~ Kategori, data = data_long)
 summary(anova_model)
+```
+
+### Visualisasi Boxplot 
+
+```{r}
+library(readxl)
+
+
+# 1. BACA DATA 
+nilai <- read_excel("D:/Tubes ADS.xlsx")
+
+# Membuat boxplot
+boxplot(nilai,
+        main = "Boxplot Nilai",
+        xlab = "Kategori",
+        ylab = "Rata-Rata Jam Belajar",
+        col = "lightblue")
 ```
