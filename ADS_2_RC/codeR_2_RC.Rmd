@@ -13,7 +13,7 @@ library(dplyr)
 library(tidyr)
 
 # 1. BACA DATA 
-data <- read_excel("D:/Tubes ADS.xlsx")
+data <- read_excel("D:/Tubes ADS/ADS_2_RC/data_2_RC.xlsx", sheet="Data", range = "E1:H174")
 
 # 2. AMBIL HANYA 4 KOLOM 
 data <- data %>%
@@ -51,7 +51,7 @@ library(readxl)
 
 
 # 1. BACA DATA 
-nilai <- read_excel("D:/Tubes ADS.xlsx")
+nilai <- read_excel("D:/Tubes ADS/ADS_2_RC/data_2_RC.xlsx", sheet="Data", range = "E1:H174")
 
 # Membuat boxplot
 boxplot(nilai,
