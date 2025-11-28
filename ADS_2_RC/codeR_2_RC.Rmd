@@ -44,7 +44,7 @@ anova_model <- aov(Jam ~ Kategori, data = data_long)
 summary(anova_model)
 ```
 
-### Visualisasi Boxplot 
+### Visualisasi Boxplot
 
 ```{r}
 library(readxl)
